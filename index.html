@@ -1,0 +1,760 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Couple Prompts — AI Couple Photo Prompts for Gemini & ChatGPT</title>
+<meta name="description" content="Free AI couple photo prompts for Gemini, ChatGPT and other AI tools. Copy, paste, and create romantic, traditional, or cinematic couple portraits.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#F5F6FA;
+  --card:#fff;
+  --ink:#20232B;
+  --mute:#6C7280;
+  --line:#E3E6ED;
+  --ac:#2A5AD9;
+  --ac2:#D62E5B;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px)
+}
+
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#14161C;
+    --card:#1D2027;
+    --ink:#EDEFF4;
+    --mute:#9BA1AF;
+    --line:#2C303A;
+    --ac:#6C8CFF;
+    --ac2:#FF6690
+  }
+}
+
+:root[data-theme="dark"]{
+  --bg:#14161C;
+  --card:#1D2027;
+  --ink:#EDEFF4;
+  --mute:#9BA1AF;
+  --line:#2C303A;
+  --ac:#6C8CFF;
+  --ac2:#FF6690
+}
+
+*,*::before,*::after{box-sizing:inherit}
+
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font:400 15px/1.55 Inter,system-ui,sans-serif
+}
+
+a{color:inherit;text-decoration:none}
+
+h1,h2,h3{
+  font-family:Poppins,Inter,sans-serif;
+  font-weight:700;
+  margin:0
+}
+
+button{
+  font:inherit;
+  color:inherit;
+  cursor:pointer;
+  background:none;
+  border:0
+}
+
+
+/* HEADER */
+
+header{
+  border-bottom:1px solid var(--line);
+  background:var(--card);
+  position:sticky;
+  top:0;
+  z-index:20
+}
+
+.hbar{
+  max-width:1080px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:14px 20px
+}
+
+.brand{
+  font:700 19px Poppins,sans-serif;
+  flex:1;
+  display:flex;
+  align-items:center;
+  gap:8px
+}
+
+.brand span{color:var(--ac2)}
+
+.navlinks{
+  display:none;
+  gap:22px;
+  font-size:14px;
+  color:var(--mute);
+  font-weight:500
+}
+
+@media(min-width:800px){
+  .navlinks{display:flex}
+}
+
+.navlinks a:hover{color:var(--ink)}
+
+.searchbtn{
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+
+.searchbtn svg{width:16px;height:16px}
+
+.menubtn{
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+
+.menubtn svg{width:17px;height:17px}
+
+@media(min-width:800px){
+  .menubtn{display:none}
+}
+
+
+/* MOBILE MENU */
+
+.mobilemenu{
+  display:none;
+  flex-direction:column;
+  border-bottom:1px solid var(--line);
+  background:var(--card)
+}
+
+.mobilemenu.open{display:flex}
+
+.mobilemenu a{
+  padding:13px 20px;
+  border-top:1px solid var(--line);
+  font-size:14.5px;
+  color:var(--mute)
+}
+
+@media(min-width:800px){
+  .mobilemenu{display:none!important}
+}
+
+
+/* MAIN */
+
+.wrap{
+  max-width:1080px;
+  margin:0 auto;
+  padding:0 20px
+}
+
+
+/* HERO */
+
+.hero{
+  padding:34px 0 8px;
+  text-align:center
+}
+
+.hero h1{
+  font-size:clamp(22px,4vw,30px);
+  line-height:1.3;
+  max-width:20em;
+  margin:0 auto
+}
+
+.hero p{
+  color:var(--mute);
+  font-size:14.5px;
+  margin:10px auto 0;
+  max-width:32em
+}
+
+
+/* FILTERS */
+
+.filters{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:20px 0 8px;
+  -webkit-overflow-scrolling:touch
+}
+
+.filters button{
+  flex:none;
+  padding:8px 15px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  background:var(--card);
+  font-size:13px;
+  font-weight:500;
+  color:var(--mute)
+}
+
+.filters button.on{
+  background:var(--ink);
+  color:var(--bg);
+  border-color:var(--ink)
+}
+
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+  padding:14px 0 44px
+}
+
+@media(min-width:640px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(min-width:960px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+}
+
+.post{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:10px;
+  overflow:hidden;
+  display:block
+}
+
+.pthumb{
+  aspect-ratio:16/10;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(155deg,var(--a),var(--b))
+}
+
+.pthumb .badge{
+  position:absolute;
+  left:10px;
+  bottom:10px;
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  font:700 12px Inter,sans-serif;
+  padding:4px 10px;
+  border-radius:5px;
+  letter-spacing:.2px
+}
+
+.pbody{
+  padding:13px 15px 16px
+}
+
+.pbody .cat{
+  font-size:11.5px;
+  color:var(--ac);
+  font-weight:600;
+  margin-bottom:5px;
+  display:block
+}
+
+.pbody h3{
+  font-size:15.5px;
+  line-height:1.35
+}
+
+
+/* LOAD MORE */
+
+.loadmore{
+  display:block;
+  text-align:center;
+  margin:0 auto 46px;
+  padding:11px 26px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:var(--card);
+  font-size:14px;
+  font-weight:600;
+  color:var(--ink)
+}
+
+.loadmore[hidden]{display:none}
+
+
+/* ABOUT */
+
+.about{
+  border-top:1px solid var(--line);
+  padding:34px 0
+}
+
+.about h2{
+  font-size:16px;
+  margin-bottom:8px
+}
+
+.about p{
+  color:var(--mute);
+  font-size:13.5px;
+  max-width:60em;
+  margin:0
+}
+
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid var(--line);
+  padding:30px 0 26px
+}
+
+.fgrid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:26px;
+  justify-content:space-between
+}
+
+.fcol h4{
+  font-size:13px;
+  margin-bottom:10px;
+  color:var(--mute);
+  font-weight:600
+}
+
+.fcol a{
+  display:block;
+  font-size:13.5px;
+  margin-bottom:7px;
+  color:var(--ink)
+}
+
+.fbottom{
+  margin-top:22px;
+  padding-top:16px;
+  border-top:1px solid var(--line);
+  font-size:12.5px;
+  color:var(--mute)
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="hbar">
+
+    <a class="brand" href="/">
+      Couple<span>Prompts</span>
+    </a>
+
+    <nav class="navlinks">
+      <a href="/">Home</a>
+      <a href="/contact-us.html">Contact Us</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/editing-prompts.html">Editing Prompt</a>
+    </nav>
+
+    <button class="searchbtn" aria-label="Search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"/>
+        <path d="m21 21-4.3-4.3"/>
+      </svg>
+    </button>
+
+    <button class="menubtn" id="menuBtn" aria-label="Menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <nav class="mobilemenu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href="/contact-us.html">Contact Us</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/editing-prompts.html">Editing Prompt</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+  </nav>
+
+</header>
+
+
+<main class="wrap">
+
+  <section class="hero">
+
+    <h1>AI couple photo prompts, ready to copy and paste</h1>
+
+    <p>
+      Pick a style, copy the prompt, paste it into Gemini or ChatGPT with your photo — that's it.
+    </p>
+
+  </section>
+
+
+  <div class="filters" id="filters">
+
+    <button class="on" data-c="All">All</button>
+    <button data-c="Romantic">Romantic</button>
+    <button data-c="Traditional">Traditional</button>
+    <button data-c="Cinematic">Cinematic</button>
+    <button data-c="Festival">Festival</button>
+    <button data-c="Aesthetic">Aesthetic</button>
+    <button data-c="Trending">Trending</button>
+
+  </div>
+
+
+  <section class="grid" id="grid"></section>
+
+  <button class="loadmore" id="loadMore">
+    Load more prompts
+  </button>
+
+
+  <section class="about">
+
+    <h2>About Couple Prompts</h2>
+
+    <p>
+      We collect and test AI couple photo prompts for Gemini, ChatGPT and similar tools, so you don't have to guess what works. Pick a style below, copy the prompt exactly as written, and paste it into your AI tool along with your photo.
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="wrap">
+
+    <div class="fgrid">
+
+      <div class="fcol">
+        <h4>Site</h4>
+        <a href="/">Home</a>
+        <a href="/all-prompts.html">All Prompts</a>
+      </div>
+
+      <div class="fcol">
+        <h4>Company</h4>
+        <a href="/about-us.html">About Us</a>
+        <a href="/contact-us.html">Contact Us</a>
+      </div>
+
+      <div class="fcol">
+        <h4>Legal</h4>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms &amp; Conditions</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+      </div>
+
+    </div>
+
+    <div class="fbottom">
+      © 2026 coupleprompts.in
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/*
+=========================================================
+ARTICLES
+
+NAYA ARTICLE ADD KARNE KE LIYE BAS EK OBJECT COPY KARO.
+
+title = homepage par dikhne wala article name
+url   = article ki HTML file ka naam
+
+Example:
+
+{
+  category: "Romantic",
+  color1: "#D62E5B",
+  color2: "#F06084",
+  title: "Valentine Couple Photo Prompt",
+  badge: "ROMANTIC",
+  url: "valentine-couple-prompt.html"
+},
+=========================================================
+*/
+
+
+const POSTS = [
+
+  {
+    category: "Romantic",
+    color1: "#2A5AD9",
+    color2: "#5A82F0",
+    title: "Sunset Beach Walk Prompt",
+    badge: "COUPLE PROMPT",
+    url: "sunset-beach-walk-couple-prompt.html"
+  },
+
+  {
+    category: "Cinematic",
+    color1: "#3B3D45",
+    color2: "#63666F",
+    title: "1980s Retro Look Prompt",
+    badge: "RETRO STYLE",
+    url: "1980s-retro-look-prompt.html"
+  },
+
+  {
+    category: "Aesthetic",
+    color1: "#7A4FB8",
+    color2: "#A579E0",
+    title: "Instagram Memory Block Prompt",
+    badge: "TRENDING",
+    url: "instagram-memory-block-prompt.html"
+  },
+
+  {
+    category: "Festival",
+    color1: "#D62E5B",
+    color2: "#F06084",
+    title: "5 Couple Onam Prompts 2026",
+    badge: "FESTIVE",
+    url: "5-couple-onam-prompts-2026.html"
+  },
+
+  {
+    category: "Traditional",
+    color1: "#B8862A",
+    color2: "#E0A93E",
+    title: "Karwa Chauth Couple Prompt",
+    badge: "FESTIVE",
+    url: "karwa-chauth-couple-prompt.html"
+  },
+
+  {
+    category: "Trending",
+    color1: "#1D8A6E",
+    color2: "#3FC49E",
+    title: "Aankhe Trending Template",
+    badge: "VIRAL",
+    url: "aankhe-trending-template.html"
+  },
+
+  {
+    category: "Traditional",
+    color1: "#2A5AD9",
+    color2: "#5A82F0",
+    title: "Royal Rajasthani Wedding Prompt",
+    badge: "TRADITIONAL",
+    url: "royal-rajasthani-wedding-prompt.html"
+  },
+
+  {
+    category: "Festival",
+    color1: "#D6752E",
+    color2: "#F0A060",
+    title: "Ganesh Ji AI Photo Prompt",
+    badge: "FESTIVE",
+    url: "ganesh-ji-ai-photo-prompt.html"
+  },
+
+  {
+    category: "Romantic",
+    color1: "#8A3B6E",
+    color2: "#C25C99",
+    title: "Long Distance Couple Prompt",
+    badge: "ROMANTIC",
+    url: "long-distance-couple-prompt.html"
+  },
+
+  {
+    category: "Cinematic",
+    color1: "#1D3A5F",
+    color2: "#3E6491",
+    title: "Rain Umbrella Couple Prompt",
+    badge: "CINEMATIC",
+    url: "rain-umbrella-couple-prompt.html"
+  },
+
+  {
+    category: "Aesthetic",
+    color1: "#5C8A3E",
+    color2: "#87BE63",
+    title: "Cafe Date Couple Prompt",
+    badge: "AESTHETIC",
+    url: "cafe-date-couple-prompt.html"
+  },
+
+  {
+    category: "Romantic",
+    color1: "#B8862A",
+    color2: "#E0A93E",
+    title: "Golden Hour Meadow Prompt",
+    badge: "ROMANTIC",
+    url: "golden-hour-meadow-prompt.html"
+  }
+
+];
+
+
+const grid = document.getElementById("grid");
+const loadMore = document.getElementById("loadMore");
+
+let activeFilter = "All";
+let visiblePosts = 6;
+
+
+/* SHOW ARTICLES */
+
+function renderPosts(){
+
+  const filteredPosts = POSTS.filter(function(post){
+
+    return activeFilter === "All" ||
+           post.category === activeFilter;
+
+  });
+
+  const postsToShow = filteredPosts.slice(0, visiblePosts);
+
+  grid.innerHTML = postsToShow.map(function(post){
+
+    return `
+      <a class="post" href="${post.url}">
+
+        <div
+          class="pthumb"
+          style="--a:${post.color1};--b:${post.color2}"
+        >
+          <span class="badge">${post.badge}</span>
+        </div>
+
+        <div class="pbody">
+
+          <span class="cat">
+            ${post.category}
+          </span>
+
+          <h3>
+            ${post.title}
+          </h3>
+
+        </div>
+
+      </a>
+    `;
+
+  }).join("");
+
+
+  if(postsToShow.length >= filteredPosts.length){
+    loadMore.hidden = true;
+  }else{
+    loadMore.hidden = false;
+  }
+
+}
+
+
+/* FILTERS */
+
+document
+  .getElementById("filters")
+  .addEventListener("click", function(e){
+
+    const button = e.target.closest("button");
+
+    if(!button){
+      return;
+    }
+
+    document
+      .querySelectorAll(".filters button")
+      .forEach(function(btn){
+
+        btn.classList.toggle(
+          "on",
+          btn === button
+        );
+
+      });
+
+    activeFilter = button.dataset.c;
+
+    visiblePosts = 6;
+
+    renderPosts();
+
+  });
+
+
+/* LOAD MORE */
+
+loadMore.addEventListener("click", function(){
+
+  visiblePosts += 6;
+
+  renderPosts();
+
+});
+
+
+/* MOBILE MENU */
+
+const menuButton = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuButton.addEventListener("click", function(){
+
+  const open =
+    mobileMenu.classList.toggle("open");
+
+  menuButton.setAttribute(
+    "aria-expanded",
+    open
+  );
+
+});
+
+
+/* START */
+
+renderPosts();
+
+</script>
+
+</body>
+</html>
+```
